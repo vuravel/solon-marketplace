@@ -1,0 +1,48 @@
+.shop-card{
+	border-top: 1px solid ghostwhite;
+	border-bottom: 1px solid ghostwhite;
+	padding: 10px;
+	font-size: 12px;
+	cursor: pointer;
+}
+.shop-title{
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+.big-tag{
+	margin-top: 1rem;
+	padding: 3px 5px;
+	border: 2px solid;
+	border-radius: 4px;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 90%;
+}
+
+a.btn-warning.btn-sm{
+	color: #555d79;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.card-options{
+	display: inline-block;
+}
+.option-div{
+	display: inline-block;
+	color: #555d79;
+	font-weight: bold;
+	opacity: 0.8;
+}
+.option-div div{
+	display: inline-block;
+	width: 0;
+	opacity: 0;
+	max-width: 0;
+	white-space: nowrap;
+	transition: all 0.2s ease-in-out;
+}
+.option-div:hover div{
+	width: auto;
+	opacity: 1;
+	max-width: 150px;
+}

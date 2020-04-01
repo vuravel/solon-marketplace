@@ -1,0 +1,31 @@
+body{
+	font-family: 'Raleway', sans-serif;
+	color: #555d79;
+}
+a{
+	color: #1c2c67;
+}
+
+
+.modal{
+	margin-left: 350px;
+	max-width: calc(100vw - 350px);
+}
+.modal-backdrop{
+	margin-left: 350px;
+}
+.modal-dialog{
+	margin-right: 15px;
+	margin-left: 15px;
+	max-width: 330px;
+}
+.modal-content{
+	padding: 5px;
+	font-size: 12px;
+}
+.modal-content button{
+	font-size: 30px;
+	top: 0px;
+	right: 5px;
+	position: absolute;
+}

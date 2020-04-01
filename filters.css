@@ -1,0 +1,53 @@
+#main_filters{
+	padding: 5px 15px 10px 10px;
+	border-bottom: 1px solid gainsboro;
+}
+#more_filters{
+	display: none;
+}
+#name_input{
+	border: 0px;
+	border-bottom: 1px solid gainsboro;
+	border-radius: 0;
+	margin-bottom: 1rem;
+	padding-left: 35px;
+}
+#name_input::placeholder { 
+	color: gainsboro; 
+}
+.fa-search-location{
+	position: absolute;
+	top: 11px;
+	left: 10px;
+	color: #ffd13d;
+}
+.fa-times{
+	position: absolute;
+	top: 14px;
+	right: 10px;
+	color: gainsboro;
+	font-size: 80%;
+	display: none;
+	cursor: pointer;
+}
+#toggleFilters{
+	font-size: 80%;
+	text-decoration: none;
+}
+#toggleFilters i{
+	font-size: 75%;
+}
+#toggleFilters.filters_open i{
+	transform: rotate(180deg);
+	transition: all 0.2s ease-in-out;
+}
+.form-check-label{
+	cursor: pointer;
+}
+#more_filters{
+	padding: 15px 0;
+}
+#shop_count{
+	color: #ffd13d;
+	font-size: 80%;
+}

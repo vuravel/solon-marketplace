@@ -1,0 +1,69 @@
+.map-wrapper{
+	  margin-left: 300px;
+}
+#mapid{
+	  height: 100vh;
+}
+.map-card{
+  max-width: 300px;
+  padding: 10px;
+  font-size: 12px;
+}
+.map-card .option-div div{
+  width: auto;
+  opacity: 1;
+  max-width: 150px;
+  font-weight: 400;
+  margin: 5px 0;
+}
+.leaflet-bottom{
+  	opacity: 0;
+  	height: 1px;
+}
+.leaflet-popup-content{
+	  min-width: 300px;
+    font-family: 'Raleway', sans-serif;
+    color: #555d79;
+    margin: 0 5px;
+}
+.leaflet-container a.leaflet-popup-close-button {
+    font-size: 25px;
+    top: 5px;
+    right:5px;
+}
+
+.marker-pin {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 50% 0;
+    background: #c30b82;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+}
+
+.marker-pin::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin: 3px 0 0 3px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+ }
+
+.marker{
+	  padding-top: 4px;
+}
+.marker i {
+    position: absolute;
+    width: 22px;
+    font-size: 14px;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+    text-align: center;
+    color: #555d79;
+}
