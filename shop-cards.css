@@ -46,3 +46,6 @@ a.btn-warning.btn-sm{
 	opacity: 1;
 	max-width: 150px;
 }
+.card-open{
+	margin-bottom: 0.25rem;
+}

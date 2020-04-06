@@ -4,6 +4,7 @@
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	border-right: 1px solid gainsboro;
 }
 #logo{
 	width: 70%;

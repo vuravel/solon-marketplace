@@ -21,14 +21,7 @@ function setMarker(item)
     
     var marker = L.marker([parseFloat(item.lat), parseFloat(item.lng)], { icon: icon }).addTo(mymap)
     marker.on('click', function(){
-    	if(!marker || isMobile){
-            $("#infos-commerce").html(getMapCard(item))
-            $('#infos-commerce-modal').modal('show')
-            openPopup(marker, item, true)
-        }else{
-            $('#infos-commerce-modal').modal('hide')
-            openPopup(marker, item)
-        }
+    	markerClick(marker, item)
     })
     markers.push({marker: marker, id: item.id})
 
@@ -41,8 +34,12 @@ function openPopup(marker, item, simple)
     marker.bindPopup(simple ? getName(item) : getMapCard(item),{
       maxWidth: "auto"
     })
-    mymap.setView(marker.getLatLng(), 18)
+	var latlng = marker.getLatLng()
+    mymap.setView([latlng.lat + (isMobile ? 0.0002 : 0.0008), latlng.lng], 18)
     marker.openPopup()
+    marker.on('click', function(){
+    	markerClick(marker, item)
+    })
 }
 
 function clearMarkers()
@@ -57,6 +54,18 @@ function clearMarkers()
     lngsum = 0
     total = 0
     displayed = 0
+}
+
+function markerClick(marker, item)
+{
+	if(!marker || isMobile){
+        $("#infos-commerce").html(getMapCard(item))
+        $('#infos-commerce-modal').modal('show')
+        openPopup(marker, item, true)
+    }else{
+        $('#infos-commerce-modal').modal('hide')
+        openPopup(marker, item)
+    }
 }
 
 function getMarkerWithId(id)
