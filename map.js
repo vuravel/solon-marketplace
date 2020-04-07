@@ -3,6 +3,8 @@ function centerMap()
 {
     if(markers.length)
         mymap.setView([latsum/markers.length, lngsum/markers.length], 14)
+
+    console.log(latsum, lngsum, markers.length, latsum/markers.length, lngsum/markers.length)
 }
 
 function setMarker(item)
