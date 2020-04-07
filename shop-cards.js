@@ -5,7 +5,7 @@ function getShopCard(item)
 
 function getMapCard(item)
 {
-    return '<div class="map-card">'+getName(item)+getAddress(item)+getPhone(item)+getWebsite(item)+getOpen(item)+getOptions(item)+getNote(item)+getBigTagHtml(item)+'</div>'    
+    return '<div class="map-card">'+getName(item)+getAddress(item)+getPhone(item)+getWebsite(item)+getOpen(item)+getOptions(item)+getNote(item)+getBigTagHtml(item)+getUrlupdate(item)+'</div>'
 }
 
 function getSmallTagHtml(item)
@@ -33,8 +33,6 @@ function getItemWithId(id)
             return items[i]
     }
 }
-
-
 
 function getName(item)
 {
@@ -111,8 +109,15 @@ function getWebsite(item)
     return ''
 }
 
-
 function isClosed(item)
 {
     return !item.open || item.open == 'Fermé'
+}
+
+function getUrlupdate(item)
+{
+    if(item.urlupdate){
+        return '<div><a class="btn btn-xs btn-light" target="_blank" href="'+ item.urlupdate +'">Mettre à jour</a></div>'
+    }
+    return ''
 }
